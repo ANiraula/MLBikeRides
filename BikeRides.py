@@ -16,7 +16,7 @@ import pandas as pd
 
 
 # load the training dataset
-data ='https://raw.githubusercontent.com/MicrosoftDocs/mslearn-introduction-to-machine-learning/main/Data/ml-basics/daily-bike-share.csv'
+data = "bike_data.csv"
 bike_data = pd.read_csv(data)
 
 ## Train a Regression model ##
