@@ -18,7 +18,11 @@ import pandas as pd
 # load the training dataset
 data ='https://raw.githubusercontent.com/MicrosoftDocs/mslearn-introduction-to-machine-learning/main/Data/ml-basics/daily-bike-share.csv'
 bike_data = pd.read_csv(data)
-bike_data.head()
+
+## Train a Regression model ##
+# Separate features and labels
+X, y = bike_data[['season','mnth', 'holiday','weekday','workingday','weathersit','temp', 'atemp', 'hum', 'windspeed']].values, bike_data['rentals'].values
+#print('Features:',X[:10], '\nLabels:', y[:10], sep='\n')
 
 # Split data 70%-30% into training set and test set
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=0)
