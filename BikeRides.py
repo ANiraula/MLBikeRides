@@ -16,8 +16,7 @@ import pandas as pd
 
 
 # load the training dataset
-data = "data/bike_data.csv"
-bike_data = pd.read_csv(data)
+bike_data = pd.read_csv("data/bike_data.csv")
 
 ## Train a Regression model ##
 # Separate features and labels
