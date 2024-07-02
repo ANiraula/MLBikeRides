@@ -16,7 +16,7 @@ import pandas as pd
 
 
 # load the training dataset
-data = "bike_data.csv"
+data = "data/bike_data.csv"
 bike_data = pd.read_csv(data)
 
 ## Train a Regression model ##
