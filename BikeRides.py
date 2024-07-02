@@ -33,6 +33,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random
 #p = np.poly1d(z)
 # Initialize the Dash app
 app = dash.Dash(__name__)
+server = app.server
 
 def fit_model(selected_model):
     if selected_model == 'LinearRegression':
