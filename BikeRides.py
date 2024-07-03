@@ -2,18 +2,12 @@
 # coding: utf-8
 
 # In[ ]:
-
-
-import dash
-import dash_core_components as dcc
-import dash_html_components as html
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingRegressor, RandomForestRegressor
 import pandas as pd
-
 
 # load the training dataset
 bike_data = pd.read_csv("data/bike_data.csv")
@@ -31,6 +25,11 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random
 #z = np.polyfit(y_test, predictions, 1)
 #p = np.poly1d(z)
 # Initialize the Dash app
+
+import dash
+from dash import dcc, html
+from dash.dependencies import Input, Output
+
 app = dash.Dash(__name__)
 server = app.server
 
