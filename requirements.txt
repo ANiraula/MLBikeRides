@@ -6,3 +6,5 @@ plotly
 gunicorn
 matplotlib
 sklearn
+dash_core_components
+dash_html_components
