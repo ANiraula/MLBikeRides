@@ -55,7 +55,6 @@ def update_scatter_plot(selected_model):
     predictions = model.predict(X_test)
     z = np.polyfit(y_test, predictions, 1)
     p = np.poly1d(z)
-    r2 = r2_score(y_test, predictions)
 
     # Create scatter plot
     scatter_data = [
