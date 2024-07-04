@@ -6,6 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.ensemble import GradientBoostingRegressor, RandomForestRegressor
 import pandas as pd
 
@@ -55,6 +56,7 @@ def update_scatter_plot(selected_model):
     predictions = model.predict(X_test)
     z = np.polyfit(y_test, predictions, 1)
     p = np.poly1d(z)
+    r2 = r2_score(y_test, predictions)
 
     # Create scatter plot
     scatter_data = [
